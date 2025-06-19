@@ -1,3 +1,4 @@
+import UserCard from "@/components/ui/user-card";
 import { IconKey, IconLogout, IconUser } from "@tabler/icons-react";
 
 export default function UsersPage() {
@@ -19,39 +20,10 @@ export default function UsersPage() {
       </div>
       <div id="content" className="bg-white w-full p-8">
         <div id="list-user" className="flex flex-col gap-2 w-full">
-          <div className="border rounded-lg p-2 flex justify-between items-center">
-            <div>
-              <h2 className="text-[18px] font-bold mb-[1px] text-slate-900">
-                Rahmat Saudi Al Fathir As
-              </h2>
-              <p className="text-base text-black mb-2">
-                rahmatsaudi@universitasmulia.ac.id
-              </p>
-              <span className="bg-black text-white text-[11px] px-[9px] py-[5px] rounded mr-[6px]">
-                admin
-              </span>
-            </div>
-            <span className="bold-text status text-[16px] font-bold">
-              aktif
-            </span>
-          </div>
-
-          <div className="border rounded-lg p-2 flex justify-between items-center">
-            <div>
-              <h2 className="text-[18px] font-bold mb-[1px] text-slate-900">
-                Rahmat Saudi Al Fathir As
-              </h2>
-              <p className="text-base text-black mb-2">
-                rahmatsaudi@universitasmulia.ac.id
-              </p>
-              <span className="bg-black text-white text-[11px] px-[9px] py-[5px] rounded mr-[6px]">
-                admin
-              </span>
-            </div>
-            <span className="bold-text status text-[16px] font-bold">
-              aktif
-            </span>
-          </div>
+          <UserCard />
+          <UserCard />
+          <UserCard />
+          <UserCard />
         </div>
       </div>
     </div>

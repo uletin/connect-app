@@ -1,7 +1,11 @@
+import { Input } from "@/components/ui/input";
 import UserCard from "@/components/ui/user-card";
+import { usersData } from "@/mock/users-data";
 import { IconKey, IconLogout, IconUser } from "@tabler/icons-react";
 
 export default function UsersPage() {
+  const users = usersData;
+
   return (
     <div className="flex h-screen">
       <div id="nav" className="bg-white w-[280px] p-8">
@@ -19,11 +23,17 @@ export default function UsersPage() {
         </div>
       </div>
       <div id="content" className="bg-white w-full p-8">
-        <div id="list-user" className="flex flex-col gap-2 w-full">
-          <UserCard />
-          <UserCard />
-          <UserCard />
-          <UserCard />
+        <Input placeholder="Cari User" />
+        <div id="list-user" className="flex flex-col gap-2 w-full mt-2">
+          {users.map((user, index) => (
+            <UserCard
+              key={index}
+              fullname={user.fullname}
+              email={user.email}
+              roles={user.roles}
+              status={user.status}
+            />
+          ))}
         </div>
       </div>
     </div>
